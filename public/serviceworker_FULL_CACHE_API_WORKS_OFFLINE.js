@@ -1,5 +1,11 @@
 const cacheName = 'version-2';
-const staticAssets = [];
+const staticAssets = [
+    './',
+    './index.html',
+    './offline.html',
+    './static',
+    './images'
+];
 
 self.addEventListener('install', async e => {
   const cache = await caches.open(cacheName);
