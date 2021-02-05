@@ -6,19 +6,35 @@ import './App.css';
 const App = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
-    
+    const [mode, setMode] = useState('online');
+
     const search = async (e) => {
         if(e.key === 'Enter') {
-            const data = await fetchWeather(query);
-
-            setWeather(data);
-            setQuery('');
+            try {
+                const data = await fetchWeather(query);
+                setWeather(data);
+                setQuery('');
+                setMode('online');
+            }
+            catch(error) {
+                setMode('offline');
+            }
         }
     }
 
     return (
         <div className="main-container">
-            <input type="text"className="search"placeholder="Search..."value={query}onChange={(e) => setQuery(e.target.value)}onKeyPress={search}/>
+            {mode === 'offline' && (
+                <div className="alert alert-warning" role="alert">
+                    you are in offline mode or some issue with connection
+                </div>
+            )}
+            <input type="text"
+                className="search"
+                placeholder="Search..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}onKeyPress={search}
+            />
             {weather.main && (
                 <div className="city">
                     <h2 className="city-name">

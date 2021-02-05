@@ -4,9 +4,9 @@ const staticAssets = [
 	'./index.html',
 	'./offline.html',
 	'./manifest.json',
-	'./static/js/main.beb0aee2.chunk.js',
-	'./static/js/2.ac686124.chunk.js',
-	'./static/css/main.267c9747.chunk.css',
+	'./static/js/main.9b2aa1ab.chunk.js',
+	'./static/js/2.444fec47.chunk.js',
+	'./static/css/main.f8d04093.chunk.css',
 	'./static/media/bg.7b83f7cd.jpg',
 	'./images/manifest-icon-192.png',
 	'./images/favicon-196.png'
