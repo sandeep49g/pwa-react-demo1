@@ -1,16 +1,15 @@
 const cacheName = 'version-2';
 const staticAssets = [
-  './',
-  './index.html',
-  './offline.html',
-  './manifest.json',
-  './static/js/bundle.js',
-  './static/js/main.chunk.js',
-  './static/js/0.chunk.js',
-  './static/css/main.chunk.js',
-  './static/media/bg.7b83f7cd.jpg',
-  './images/manifest-icon-192.png',
-  './images/favicon-196.png'
+	'./',
+	'./index.html',
+	'./offline.html',
+	'./manifest.json',
+	'./static/js/main.beb0aee2.chunk.js',
+	'./static/js/2.ac686124.chunk.js',
+	'./static/css/main.267c9747.chunk.css',
+	'./static/media/bg.7b83f7cd.jpg',
+	'./images/manifest-icon-192.png',
+	'./images/favicon-196.png'
 ];
 
 const self = this;

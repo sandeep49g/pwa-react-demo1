@@ -1,22 +1,33 @@
 const cacheName = 'version-2';
 const staticAssets = [
-    './',
-    './index.html',
-    './offline.html',
-    './static',
-    './images'
+  './',
+  './index.html',
+  './offline.html',
+  './manifest.json',
+  './static/js/bundle.js',
+  './static/js/main.chunk.js',
+  './static/js/0.chunk.js',
+  './static/css/main.chunk.js',
+  './static/media/bg.7b83f7cd.jpg',
+  './images/manifest-icon-192.png',
+  './images/favicon-196.png'
 ];
 
+const self = this;
+
+// Install SW
 self.addEventListener('install', async e => {
   const cache = await caches.open(cacheName);
   await cache.addAll(staticAssets);
   return self.skipWaiting();
 });
 
+// Activate the SW
 self.addEventListener('activate', e => {
   self.clients.claim();
 });
 
+// Listen for requests
 self.addEventListener('fetch', async e => {
   const req = e.request;
   const url = new URL(req.url);
