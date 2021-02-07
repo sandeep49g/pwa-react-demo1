@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
@@ -6,19 +6,19 @@ import './App.css';
 const App = () => {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
-    const [mode, setMode] = useState('online');
+    
+    const [mode, setMode] = useState(window.navigator.onLine ? 'online' : 'offline');
+
+    useEffect(() => {
+        window.addEventListener('online', () => setMode('online'));
+        window.addEventListener('offline', () => setMode('offline'));
+    }, []);
 
     const search = async (e) => {
         if(e.key === 'Enter') {
-            try {
-                const data = await fetchWeather(query);
-                setWeather(data);
-                setQuery('');
-                setMode('online');
-            }
-            catch(error) {
-                setMode('offline');
-            }
+            const data = await fetchWeather(query);
+            setWeather(data);
+            setQuery('');
         }
     }
 

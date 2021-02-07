@@ -1,7 +1,3 @@
-Note: serviceworker_OFFLINE_TEMPLATE :: Core JS Service Worker with Offline template if no internet
-
-Note: serviceworker_FULL_CACHE_API_WORKS_OFFLINE :: Core JS Service Worker: Cached with all files : Network API would even work if no internet with old cached data
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -72,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Note: serviceworker_OFFLINE_TEMPLATE :: Core JS Service Worker with Offline template if no internet
+
+Note: serviceworker_FULL_CACHE_API_WORKS_OFFLINE :: Core JS Service Worker: Cached with all files : Network API would even work if no internet with old cached data
+
+> npm create-react-app .
